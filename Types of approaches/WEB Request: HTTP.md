@@ -16,4 +16,32 @@ Component| **Example**| Description
 ![image](https://github.com/RipperGh/BugHunting-D/assets/165308866/ed7fcb3c-59aa-47f9-8176-036d238c4c94)
 The diagram above presents an HTTP request's anatomy at a very high level. The first time a user enters the URL (inlanefreight.com) into the browser, it sends a request to a DNS (Domain Name Resolution) server to resolve the domain and get its IP. The DNS server looks up the IP address for inlanefreight.com and returns it. All domain names need to be resolved this way, as a server can't communicate without an IP address.
 
+# cURL
+
+  Descripition: 
+  
+  cURL (client URL) is a command-line tool and library that primarily supports HTTP along with many other protocols. This makes it a good candidate for scripts as well as automation, making it essential for sending various types of web requests from the command line, which is necessary for many types of web penetration tests.
+
+Example of cURL
+```
+GhostRipper@htb[/htb]$ curl inlanefreight.com
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head
+```
+
+Example of using cURL with -O flag 
+-O flag is used to download file of targeted url 
+```
+GhostRipper@htb[/htb]$ curl -O inlanefreight.com/index.html
+GhostRipper@htb[/htb]$ ls
+index.html
+```
+
+Example of using cURL with -s flag 
+
+We can silent the status with the -s flag, as follows:
+```
+GhostRipper@htb[/htb]$ curl -s -O inlanefreight.com/index.html
+```
 
