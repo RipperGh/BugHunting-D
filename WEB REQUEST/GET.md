@@ -110,5 +110,12 @@ We can also repeat the exact request right within the browser devtools, by selec
 ![image](https://github.com/RipperGh/BugHunting-D/assets/165308866/65760668-779e-40f0-87e8-41605ffabd54)
 
 
+# Example Excerise 
+Question: 
+  The exercise above seems to be broken, as it returns incorrect results. Use the browser devtools to see what is the request it is sending when we search, and use cURL to search for 'flag' and obtain the flag.
 
+Target:http://94.237.54.170:40470/
+
+
+Answer
 
