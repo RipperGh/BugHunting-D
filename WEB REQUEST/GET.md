@@ -106,16 +106,28 @@ Leeds (UK)
 Leicester (UK)
 ```
 
-We can also repeat the exact request right within the browser devtools, by selecting Copy>Copy as Fetch. This will copy the same HTTP request using the JavaScript Fetch library. Then, we can go to the JavaScript console tab by clicking [CTRL+SHIFT+K], paste our Fetch command and hit enter to send the request:
+We can also repeat the exact request right within the browser devtools, by selecting Copy>Copy as Fetch. This will copy the same HTTP request using the JavaScript Fetch library. Then, we can go to the JavaScript console tab by clicking [CTRL+SHIFT+K], paste our Fetch command, and hit enter to send the request:
 ![image](https://github.com/RipperGh/BugHunting-D/assets/165308866/65760668-779e-40f0-87e8-41605ffabd54)
 
 
-# Example Excerise 
+# Example Exercise 
 Question: 
-  The exercise above seems to be broken, as it returns incorrect results. Use the browser devtools to see what is the request it is sending when we search, and use cURL to search for 'flag' and obtain the flag.
+  The exercise above seems to be broken, as it returns incorrect results. Use the browser devtools to see what is request it is sending when we search, and use cURL to search for 'flag' and obtain the flag.
 
-Target:http://94.237.54.170:40470/
+Target:http:94.237.54.170:48871
 
-
-Answer
+**Note to self** 
+  Remember that when you were doing 
+  
+  if
+  curl 94.237.54.170:48871, you will get access denied
+  but
+  curl -u admin:admin 94.237.54.170:48871, gave a response of 200(connected)
+  still, no answer to flag 
+  after looking I realize that 
+  curl -u admin:admin "http://94.237.54.170:48871/search.php?*search=flag/HTB*"
+  I started to look for everything with php database since it allows me to search for other information
+  
+Answer:
+  HTB{curl_g3773r}
 
