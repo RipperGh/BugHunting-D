@@ -118,16 +118,23 @@ Target:http:94.237.54.170:48871
 
 **Note to self** 
   Remember that when you were doing 
-  
+```  
   if
-  curl 94.237.54.170:48871, you will get access denied
-  but
-  curl -u admin:admin 94.237.54.170:48871, gave a response of 200(connected)
-  still, no answer to flag 
-  after looking I realize that 
-  curl -u admin:admin "http://94.237.54.170:48871/search.php?*search=flag/HTB*"
-  I started to look for everything with php database since it allows me to search for other information
   
+  curl 94.237.54.170:48871, you will get access denied
+  
+  but
+  
+  curl -u admin:admin 94.237.54.170:48871, gave a response of 200(connected)
+  
+  still, no answer to flag 
+  
+  after looking I realize that 
+  
+  curl -u admin:admin "http://94.237.54.170:48871/search.php?*search=flag/HTB*"
+  
+  I started to look for everything with php database since it allows me to search for other information
+  ```
 Answer:
   HTB{curl_g3773r}
 
