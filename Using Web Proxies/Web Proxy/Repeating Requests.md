@@ -69,3 +69,12 @@ Finally, we can see in our previous POST request that the data is URL-encoded. T
 Question: Try using request repeating to be able to quickly test commands. With that, try looking for the other flag.
 
 Target: 94.237.53.3:39302
+
+Answer: ip=1;ls /; find /flag.txt; cat /flag.txt to find HTB{qu1ckly_r3p3471n6_r3qu3575}
+### Note: / is a way to find a different object from HTTP response so it's like traversing through the direct
+ -  So example when using the find option if I did not include '/' it would have just gave the original flag that was incorrect
+ -  After putting '/' I was able to find other things with the find option to pull from different directories
+
+   ![image](https://github.com/RipperGh/BugHunting-D/assets/165308866/a788b39d-0a59-4744-a547-d74c5da4328e)
+
+This shows the different directives that HTTP does give for me to do a command-injected 
