@@ -68,7 +68,11 @@ Question:  Try running a VHost fuzzing scan on 'academy.htb', and see what other
 
 Target: 94.237.58.148:54228
 
+ffuf -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt:FUZZ -u http://94.237.54.170:34241/ -H 'Host: FUZZ.academy.htb' -fs 986
 
+Was cmd used to target the specific sub domain , and to filter out any 986 
+
+Answer: Target.academy.htb
 
 
 
