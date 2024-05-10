@@ -38,4 +38,9 @@ Target: 94.237.57.59:41711
 
 Answer:HTB{570r3d_f0r_3v3ry0n3_70_533}
 
-Looked at storage and saw the cookie showing flag
+I looked at storage and saw the cookie showing flag
+
+5/10/2024
+I realize after doing a few further into hack the box 
+```<script>alert(document.cookie)</script>```
+it would be best if you changed out the original of this function in order to call the cookie from the entry box 
